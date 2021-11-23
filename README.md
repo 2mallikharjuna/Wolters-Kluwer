@@ -21,6 +21,7 @@ PinCode
 
 ## ASP.Net Core 5.1 API
 **Physical DB store**
+**AutoMapper**
 Run `Add-Migrations`
 Run `update-database`
 
@@ -38,6 +39,13 @@ Run `update-database`
 **http://localhost:4200/customers**
 
 ** Development server **
+
+`npm install --save ag-grid-community ag-grid-angular`
+
+`npm install bootstrap --save`
+
+`npm i ngx-toastr`
+
 
 Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/Customers`. The app will automatically reload if you change any of the source files.
 
