@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>  
+                <span class="badge badge-dark" id="header">Customer Registration</span>  
+            </h1>  
+            <hr>  
+                <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="firstName">First Name:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="FirstName">  
+                                <div *ngIf="submitted && customerForm.controls.FirstName.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.FirstName.errors.required">First name is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="LastName">Last Name:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="LastName">  
+                                <div *ngIf="submitted && customerForm.controls.LastName.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.LastName.errors.required">Last name is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="DateOfBirth">Birth Date:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="date" class="form-control" formControlName="DateOfBirth">  
+                                <div *ngIf="submitted && customerForm.controls.DateOfBirth.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.DateOfBirth.errors.required">First name is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="EmailId">EmailId:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="EmailId">  
+                                <div *ngIf="submitted && customerForm.controls.EmailId.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.EmailId.errors.required">EmailId is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="firstName">Gender:</label>  
+                        </div>  
+                        <div class="col-md-6">   
+                                <input type="radio" name="gender" [value]="0" formControlName="Gender"> Not to Say                            
+                                <input type="radio" name="gender" [value]="1" formControlName="Gender"> Male     
+                                <input type="radio" name="gender" [value]="2" formControlName="Gender"> FeMale                                                               
+                                <div *ngIf="submitted && customerForm.controls.Gender.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.Gender.errors.required">Gender is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="firstName">Address:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="Address">  
+                                <div *ngIf="submitted && customerForm.controls.Address.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.Address.errors.required">Address is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="firstName">Mobile:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="MobileNo">  
+                                <div *ngIf="submitted && customerForm.controls.MobileNo.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.MobileNo.errors.required">Mobile number is required</div>  
+                                </div>  
+                        </div>  
+                    </div>  
+                    <div class="row">  
+                        <div class="col-md-4">  
+                            <label for="firstName">Pin Code:</label>  
+                        </div>  
+                        <div class="col-md-6">  
+                            <input type="text" class="form-control" formControlName="PinCode">  
+                                <div *ngIf="submitted && customerForm.controls.MobileNo.errors" class="error">  
+                                    <div *ngIf="customerForm.controls.PinCode.errors.required">PinCode is required</div>  
+                                </div>  
+                        </div>  
+                        </div>  
+                    <div class="row">  
+                        <div class="col-md-4"></div>  
+                        <div class="col-md-4">  
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <input type="button" class="btn btn-warning" (click)="Cancel()" value="Cancel">  
+                        </div>  
+                    </div>
+                </form>  
+            
+        </div>  
+    </div>  
+</div>  

@@ -1,0 +1,24 @@
+<div class="componentContainer">
+    <h2 class="header">AG Grid CRUD Operations</h2>
+    <hr>
+    <div class="buttonContainer">
+        <button (click)="createCustomer()" class="btn btn-primary" *ngIf="showAddButton">Add</button>           
+        <button (click)="deleteCustomer()" class="btn btn-primary" *ngIf="showDeleteButton">Delete</button>
+        <button (click)="saveAll()" class="btn btn-primary" *ngIf="showSaveButton">Save</button>  
+        <button (click)="cancelAll()" class="btn btn-primary" *ngIf="showCancelButton">Cancel</button>   
+    </div>
+    <br>
+    <div class="gridContainer" *ngIf="columnDefs.length > 0">
+        <ag-grid-angular
+            style="width: 100%; height: 200px;"
+            class="ag-theme-blue"
+            [rowData]="customers"
+            [columnDefs]="columnDefs"
+            rowSelection="single"
+            (gridReady)="onGridReady($event)"
+            (cellValueChanged)="onCellValueChanged($event)"
+            stopEditing
+            >
+        </ag-grid-angular>
+    </div>
+</div>
